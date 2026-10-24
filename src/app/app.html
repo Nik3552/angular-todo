@@ -1,0 +1,22 @@
+<main>
+  <div class="container">
+    <h1>To-Do List</h1>
+    <div class="input-container">
+      <input type="text" placeholder="Enter your task..." [(ngModel)]="inputValue">
+      <button id="add-btn" (click)="addTask()">ADD</button>
+    </div>
+    <p id="total-tasks">Total tasks: {{totalTasks()}}</p>
+    <div class="tasks" [ngStyle]="{'justify-content': tasks().length > 0 ? 'normal' : 'center'}">
+      @if (tasks().length > 0){
+        @for (task of tasks(); track task.id) {
+          <span class="task-container">
+            <p>{{task.task}}</p>
+            <button (click)="delTask(task.id)">DEL</button>
+          </span>
+        }
+      } @else {
+        <span id="no-tasks">Your tasks will be displayed here...</span>
+      }
+    </div>
+  </div>
+</main>

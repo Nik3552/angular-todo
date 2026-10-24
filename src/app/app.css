@@ -1,0 +1,117 @@
+main{
+    width: 100vw;
+    height: 100vh;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container{
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    height: 80%;
+}
+
+h1{
+    align-self: flex-start;
+    padding-bottom: 10px;
+}
+
+.input-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+#total-tasks{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    align-self: flex-start;
+    color: rgb(0, 0, 0, 60%);;
+}
+
+input{
+    width: 100%;
+    border: 1px solid black;
+    border-color: rgb(0, 0, 0, 30%);
+    padding: 10px;
+    outline: none;
+    border-radius: 5px;
+}
+
+#add-btn{
+    background-color: rgb(89, 89, 249);
+    color: #fff;
+    border: 0;
+    padding: 11px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.tasks{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex: 1;
+    overflow-y: scroll;
+}
+
+.tasks::-webkit-scrollbar{
+    display: none;
+}
+
+.tasks .task-container{
+    border: 1px solid black;
+    border-color: rgb(0, 0, 0, 30%);
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    overflow-x:hidden;
+    overflow-y: hidden;
+    gap: 10px;
+    min-height: 53px;
+    position: relative;
+    text-overflow: ellipsis;
+}
+.tasks .task-container::-webkit-scrollbar{
+    display: none;
+}
+
+.tasks .task-container p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 50px;
+}
+
+.tasks .task-container button{
+    align-self: flex-end;
+    padding: 8px;
+    background-color: red;
+    color: #fff;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+}
+
+#no-tasks{
+    align-self: center;
+    padding-bottom: 10px;
+    text-align: center;
+}
